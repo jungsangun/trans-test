@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tarnslator</h1>
+    <textarea name="" id="txtaSrc" cols="30" rows="10"></textarea>
+    <button onclick="myTrans()">변환</button>
+    <div class="result"></div>
+    <textarea name="" id="txtaRst" cols="30" rows="10"></textarea>
+
+    <script src="./hangul.js"></script>
+    <script>
+        console.log(Hangul.disassemble('가나다'))
+    </script>
+
+    <script>
+        function translator(str){
+            return str.split('').map(function(str){
+                
+            })
+            var d = Hangul.disassemble(str);
+            var s ='';
+
+        }
+
+        window.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('.change').addEventListener('click', ()=>{
+                var originalTextValue = document.querySelector('.original-text').value;
+                var changeText = translator(originalTextValue);
+                document.querySelector('.result-text').innerText = changeText;
+            })
+        })
+    </script>
+</body>
+</html>
